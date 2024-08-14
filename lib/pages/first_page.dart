@@ -9,14 +9,16 @@ class FirstPage extends StatefulWidget {
   FirstPage({super.key});
 
   @override
-  State<FirstPage> createState() => _FirstPageState();
+  State<FirstPage> createState() => _FirstPageState();  
 }
 
 class _FirstPageState extends State<FirstPage> {
   int _selectedIndex = 0;
 
   void _navigateBottomBar(int index){
-    _selectedIndex = index;
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 
   final List _pages = [
